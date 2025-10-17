@@ -1,4 +1,3 @@
-`
 from pyrogram import Client
 import config
 from ..logging import LOGGER
@@ -138,4 +137,4 @@ class Userbot(Client):
                 await self.five.stop()
         except Exception as e:
             LOGGER(name).warning(f"Warning: Failed to stop one or more assistants - {str(e)}")
-`
+
