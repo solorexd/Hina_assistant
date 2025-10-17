@@ -9,24 +9,24 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # --tu---------------------------------------------------
-API_ID = int(getenv("24245588"))
-API_HASH = getenv("0d9a3e94c9b684b92ac8046c177987ba")
+API_ID = 24245588
+API_HASH = "0d9a3e94c9b684b92ac8046c177987ba"
 # ------------------------------------------------------
-BOT_TOKEN = getenv("8288301156:AAEoZRt_sfeCP6KRdgqyT8kAzhKLkdk67SA")
+BOT_TOKEN = "8288301156:AAEoZRt_sfeCP6KRdgqyT8kAzhKLkdk67SA"
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","ll_ALPHA_BABY_lll")
+OWNER_USERNAME = "ll_ALPHA_BABY_lll"
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME","PURVI_MUSIC_BOT")
+BOT_USERNAME = "BOT_USERNAME","PURVI_MUSIC_BOT"
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME")
+BOT_NAME = "baba tillu"
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME")
+ASSUSERNAME = "ASSUSERNAME"
 # ---------------------------------------------------------
 
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("mongodb+srv://Hanshinu_db:grenaff123@cluster1.qscbztc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1", None)
+MONGO_DB_URI = "mongodb+srv://Hanshinu_db:grenaff123@cluster1.qscbztc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -35,10 +35,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1002141133985))
+LOGGER_ID =  -1002141133985
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7403621976))
+OWNER_ID =  7403621976
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -114,7 +114,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
 # ------------------------------------
 # ------------------------------------
 # ------------------------------------
-STRING1 = getenv("STRING_SESSION", "BQFx9VQAm73DJmE-dNeLdkUYyAtQ1ns5DwJ5ahA9KgvPlmyKgK6hBodc2D4hGTCU7xs1KWg8mPrSy9jwc0SPSlwhjUAg25px5yn-xTMbC-rnMcSX29rQaJLLggftu7P7zY7H2GhcgkQjr15n-fnZqMeuIpgECfQQKDa4hpHsJlt4L0xPKJoSopDfOGipwg__FmUdgRUPtoOjcxB8C_VIK3cZ4Rvm8sJI873XNbnI6_K9imWLfXLH6ZNtLqqYhFuU0xx_5vaSJ-W0Rzuo9AVXJqz9JfPOGsskRVmZatIOhBFOK3_o_wRqjC_5e1L-_K7agp0D-4j9eLYRnCkjiAEZ4hYaHrMDcgAAAAG5gJzlAA")
+STRING1 =  "BQFx9VQAm73DJmE-dNeLdkUYyAtQ1ns5DwJ5ahA9KgvPlmyKgK6hBodc2D4hGTCU7xs1KWg8mPrSy9jwc0SPSlwhjUAg25px5yn-xTMbC-rnMcSX29rQaJLLggftu7P7zY7H2GhcgkQjr15n-fnZqMeuIpgECfQQKDa4hpHsJlt4L0xPKJoSopDfOGipwg__FmUdgRUPtoOjcxB8C_VIK3cZ4Rvm8sJI873XNbnI6_K9imWLfXLH6ZNtLqqYhFuU0xx_5vaSJ-W0Rzuo9AVXJqz9JfPOGsskRVmZatIOhBFOK3_o_wRqjC_5e1L-_K7agp0D-4j9eLYRnCkjiAEZ4hYaHrMDcgAAAAG5gJzlAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
