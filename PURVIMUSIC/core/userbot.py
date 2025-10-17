@@ -51,13 +51,13 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("PURVI_SUPPORT")
-                await self.one.join_chat("PURVI_UPDATES")
+                await self.one.join_chat("hxh_bot_SUPPORT")
+                await self.one.join_chat("about_zenuu")
             except:
                 pass
             assistants.append(1)
             try:
-                await self.one.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.one.send_message("@zenitsu_xsupport", "Assistant Started")
             except:
                 LOGGER(__name__).error(
                     "Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
