@@ -1,13 +1,14 @@
+import logging
 from pyrogram import Client
 import config
-from ..logging import LOGGER
+
+logger = logging.getLogger(name)
 
 assistants = []
 assistantids = []
 
-class Userbot(Client):
+class Userbot:
     def init(self):
-        # Initialize assistant clients
         self.one = Client(
             name="Devineassistant1",
             api_id=config.API_ID,
@@ -45,96 +46,94 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(name).info(f"Starting Assistants...")
-
+        logger.info("Starting Assistants...")
         if config.STRING1:
             try:
                 await self.one.start()
                 await self.one.join_chat("As_cosmos")
                 await self.one.join_chat("HXH_NETWORK")
+                me = await self.one.get_me()
+                self.one.id = me.id
+                self.one.name = me.mention
+                self.one.username = me.username
                 assistants.append(1)
-                await self.one.send_message("@zenitsu_xsupport", "<b>𝟷'sᴛ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
-                self.one.id = self.one.me.id
-                self.one.name = self.one.me.mention
-                self.one.username = self.one.me.username
                 assistantids.append(self.one.id)
-                LOGGER(name).info(f"Assistant Started as {self.one.name}")
+                await self.one.send_message("@zenitsu_xsupport", "<b>𝟷'sᴛ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
+                logger.info(f"Assistant Started as {self.one.name}")
             except Exception as e:
-                LOGGER(name).warning(f"Warning: Failed to start Assistant 1 - {str(e)}")
+                logger.warning(f"Warning: Failed to start Assistant 1 - {e}")
 
         if config.STRING2:
             try:
                 await self.two.start()
                 await self.two.join_chat("as_cosmos")
                 await self.two.join_chat("hxh_network")
+                me = await self.two.get_me()
+                self.two.id = me.id
+                self.two.name = me.mention
+                self.two.username = me.username
                 assistants.append(2)
-                await self.two.send_message("@zenitsu_xsupport", "<b>𝟸ɴᴅ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
-                self.two.id = self.two.me.id
-                self.two.name = self.two.me.mention
-                self.two.username = self.two.me.username
                 assistantids.append(self.two.id)
-                LOGGER(name).info(f"Assistant Two Started as {self.two.name}")
+                await self.two.send_message("@zenitsu_xsupport", "<b>𝟸ɴᴅ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
+                logger.info(f"Assistant Two Started as {self.two.name}")
             except Exception as e:
-                LOGGER(name).warning(f"Warning: Failed to start Assistant 2 - {str(e)}")
-                
+                logger.warning(f"Warning: Failed to start Assistant 2 - {e}")
+
         if config.STRING3:
             try:
                 await self.three.start()
                 await self.three.join_chat("as_cosmos")
                 await self.three.join_chat("hxh_network")
+                me = await self.three.get_me()
+                self.three.id = me.id
+                self.three.name = me.mention
+                self.three.username = me.username
                 assistants.append(3)
-                await self.three.send_message("@zenitsu_xsupport", "<b>𝟹ʀᴅ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
-                self.three.id = self.three.me.id
-                self.three.name = self.three.me.mention
-                self.three.username = self.three.me.username
                 assistantids.append(self.three.id)
-                LOGGER(name).info(f"Assistant Three Started as {self.three.name}")
+                await self.three.send_message("@zenitsu_xsupport", "<b>𝟹ʀᴅ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
+                logger.info(f"Assistant Three Started as {self.three.name}")
             except Exception as e:
-                LOGGER(name).warning(f"Warning: Failed to start Assistant 3 - {str(e)}")
-                
+                logger.warning(f"Warning: Failed to start Assistant 3 - {e}")
+
         if config.STRING4:
             try:
                 await self.four.start()
                 await self.four.join_chat("as_cosmos")
                 await self.four.join_chat("hxh_network")
+                me = await self.four.get_me()
+                self.four.id = me.id
+                self.four.name = me.mention
+                self.four.username = me.username
                 assistants.append(4)
-                await self.four.send_message("@zenitsu_xsupport", "<b>𝟺ᴛʜ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
-                self.four.id = self.four.me.id
-                self.four.name = self.four.me.mention
-                self.four.username = self.four.me.username
                 assistantids.append(self.four.id)
-                LOGGER(name).info(f"Assistant Four Started as {self.four.name}")
+                await self.four.send_message("@zenitsu_xsupport", "<b>𝟺ᴛʜ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
+                logger.info(f"Assistant Four Started as {self.four.name}")
             except Exception as e:
-                LOGGER(name).warning(f"Warning: Failed to start Assistant 4 - {str(e)}")
+                logger.warning(f"Warning: Failed to start Assistant 4 - {e}")
 
         if config.STRING5:
             try:
                 await self.five.start()
                 await self.five.join_chat("as_cosmos")
                 await self.five.join_chat("hxh_network")
+                me = await self.five.get_me()
+                self.five.id = me.id
+                self.five.name = me.mention
+                self.five.username = me.username
                 assistants.append(5)
-                await self.five.send_message("@zenitsu_xsupport", "<b>𝟻ᴛʜ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
-                self.five.id = self.five.me.id
-                self.five.name = self.five.me.mention
-                self.five.username = self.five.me.username
                 assistantids.append(self.five.id)
-                LOGGER(name).info(f"Assistant Five Started as {self.five.name}")
+                await self.five.send_message("@zenitsu_xsupport", "<b>𝟻ᴛʜ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
+                logger.info(f"Assistant Five Started as {self.five.name}")
             except Exception as e:
-                LOGGER(name).warning(f"Warning: Failed to start Assistant 5 - {str(e)}")
+                logger.warning(f"Warning: Failed to start Assistant 5 - {e}")
 
     async def stop(self):
-        LOGGER(name).info(f"Stopping Assistants...")
+        logger.info("Stopping Assistants...")
         try:
-            if config.STRING1:
-                await self.one.stop()
-            if config.STRING2:
-                await self.two.stop()
-            if config.STRING3:
-                await self.three.stop()
-            if config.STRING4:
-                await self.four.stop()
-            if config.STRING5:
-                await self.five.stop()
+            if config.STRING1: await self.one.stop()
+            if config.STRING2: await self.two.stop()
+            if config.STRING3: await self.three.stop()
+            if config.STRING4: await self.four.stop()
+            if config.STRING5: await self.five.stop()
         except Exception as e:
-            LOGGER(name).warning(f"Warning: Failed to stop one or more assistants - {str(e)}")
-
+            logger.warning(f"Warning: Failed to stop one or more assistants - {e}")
