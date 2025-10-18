@@ -2,48 +2,23 @@ import logging
 from pyrogram import Client
 import config
 
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 assistants = []
 assistantids = []
 
 class Userbot:
     def init(self):
-        self.one = Client(
-            name="Devineassistant1",
-            api_id=config.API_ID,
-            api_hash=config.API_HASH,
-            session_string=str(config.STRING1),
-            no_updates=True,
-        )
-        self.two = Client(
-            name="Devineassistant2",
-            api_id=config.API_ID,
-            api_hash=config.API_HASH,
-            session_string=str(config.STRING2),
-            no_updates=True,
-        )
-        self.three = Client(
-            name="Devineassistant3",
-            api_id=config.API_ID,
-            api_hash=config.API_HASH,
-            session_string=str(config.STRING3),
-            no_updates=True,
-        )
-        self.four = Client(
-            name="Devineassistant4",
-            api_id=config.API_ID,
-            api_hash=config.API_HASH,
-            session_string=str(config.STRING4),
-            no_updates=True,
-        )
-        self.five = Client(
-            name="Devineassistant5",
-            api_id=config.API_ID,
-            api_hash=config.API_HASH,
-            session_string=str(config.STRING5),
-            no_updates=True,
-        )
+        self.one = Client("Devineassistant1", api_id=config.API_ID, api_hash=config.API_HASH,
+                          session_string=str(config.STRING1), no_updates=True)
+        self.two = Client("Devineassistant2", api_id=config.API_ID, api_hash=config.API_HASH,
+                          session_string=str(config.STRING2), no_updates=True)
+        self.three = Client("Devineassistant3", api_id=config.API_ID, api_hash=config.API_HASH,
+                            session_string=str(config.STRING3), no_updates=True)
+        self.four = Client("Devineassistant4", api_id=config.API_ID, api_hash=config.API_HASH,
+                           session_string=str(config.STRING4), no_updates=True)
+        self.five = Client("Devineassistant5", api_id=config.API_ID, api_hash=config.API_HASH,
+                           session_string=str(config.STRING5), no_updates=True)
 
     async def start(self):
         logger.info("Starting Assistants...")
@@ -53,11 +28,9 @@ class Userbot:
                 await self.one.join_chat("As_cosmos")
                 await self.one.join_chat("HXH_NETWORK")
                 me = await self.one.get_me()
-                self.one.id = me.id
+                self.one.id, self.one.username = me.id, me.username
                 self.one.name = me.mention
-                self.one.username = me.username
-                assistants.append(1)
-                assistantids.append(self.one.id)
+                assistants.append(1); assistantids.append(self.one.id)
                 await self.one.send_message("@zenitsu_xsupport", "<b>𝟷'sᴛ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
                 logger.info(f"Assistant Started as {self.one.name}")
             except Exception as e:
@@ -69,11 +42,9 @@ class Userbot:
                 await self.two.join_chat("as_cosmos")
                 await self.two.join_chat("hxh_network")
                 me = await self.two.get_me()
-                self.two.id = me.id
+                self.two.id, self.two.username = me.id, me.username
                 self.two.name = me.mention
-                self.two.username = me.username
-                assistants.append(2)
-                assistantids.append(self.two.id)
+                assistants.append(2); assistantids.append(self.two.id)
                 await self.two.send_message("@zenitsu_xsupport", "<b>𝟸ɴᴅ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
                 logger.info(f"Assistant Two Started as {self.two.name}")
             except Exception as e:
@@ -85,11 +56,9 @@ class Userbot:
                 await self.three.join_chat("as_cosmos")
                 await self.three.join_chat("hxh_network")
                 me = await self.three.get_me()
-                self.three.id = me.id
+                self.three.id, self.three.username = me.id, me.username
                 self.three.name = me.mention
-                self.three.username = me.username
-                assistants.append(3)
-                assistantids.append(self.three.id)
+                assistants.append(3); assistantids.append(self.three.id)
                 await self.three.send_message("@zenitsu_xsupport", "<b>𝟹ʀᴅ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
                 logger.info(f"Assistant Three Started as {self.three.name}")
             except Exception as e:
@@ -101,27 +70,22 @@ class Userbot:
                 await self.four.join_chat("as_cosmos")
                 await self.four.join_chat("hxh_network")
                 me = await self.four.get_me()
-                self.four.id = me.id
+                self.four.id, self.four.username = me.id, me.username
                 self.four.name = me.mention
-                self.four.username = me.username
-                assistants.append(4)
-                assistantids.append(self.four.id)
+                assistants.append(4); assistantids.append(self.four.id)
                 await self.four.send_message("@zenitsu_xsupport", "<b>𝟺ᴛʜ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
                 logger.info(f"Assistant Four Started as {self.four.name}")
             except Exception as e:
                 logger.warning(f"Warning: Failed to start Assistant 4 - {e}")
-
-        if config.STRING5:
+                if config.STRING5:
             try:
                 await self.five.start()
                 await self.five.join_chat("as_cosmos")
                 await self.five.join_chat("hxh_network")
                 me = await self.five.get_me()
-                self.five.id = me.id
+                self.five.id, self.five.username = me.id, me.username
                 self.five.name = me.mention
-                self.five.username = me.username
-                assistants.append(5)
-                assistantids.append(self.five.id)
+                assistants.append(5); assistantids.append(self.five.id)
                 await self.five.send_message("@zenitsu_xsupport", "<b>𝟻ᴛʜ ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ</b>")
                 logger.info(f"Assistant Five Started as {self.five.name}")
             except Exception as e:
