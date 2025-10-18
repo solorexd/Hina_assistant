@@ -77,6 +77,7 @@ class Userbot:
                 logger.info(f"Assistant Four Started as {self.four.name}")
             except Exception as e:
                 logger.warning(f"Warning: Failed to start Assistant 4 - {e}")
+                
                 if config.STRING5:
             try:
                 await self.five.start()
