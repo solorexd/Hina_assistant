@@ -14,7 +14,8 @@ heroku()
 
 app = PURVI()
 api = SafoneAPI()
-userbot = Userbot()
+userbot = Userbot(name="PURVIBOTS")
+
 
 
 from .platforms import *
