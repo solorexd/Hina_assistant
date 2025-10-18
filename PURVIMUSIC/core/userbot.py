@@ -8,7 +8,8 @@ assistants = []
 assistantids = []
 
 class Userbot:
-    def init(self):
+    class Userbot:
+    def __init__(self):
         self.one = Client("Devineassistant1", api_id=config.API_ID, api_hash=config.API_HASH,
                           session_string=str(config.STRING1), no_updates=True)
         self.two = Client("Devineassistant2", api_id=config.API_ID, api_hash=config.API_HASH,
@@ -92,7 +93,7 @@ class Userbot:
             except Exception as e:
                 logger.warning(f"Warning: Failed to start Assistant 5 - {e}")
 
-    async def stop(self):
+        async def stop(self):
         logger.info("Stopping Assistants...")
         try:
             if config.STRING1: await self.one.stop()
